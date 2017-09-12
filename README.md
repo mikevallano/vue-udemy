@@ -1,5 +1,7 @@
 # README
 
+## How to clone this repo, rename it, and use it for whatever you'd like
+
 - Copy the clone url (`git@github.com:mikevallano/templatetest.git`)
 - Clone to the folder where you want to store it (If you already have a project with the same name,
 clone into a different folder, follow steps to rename the app, then move it where you'd like).
