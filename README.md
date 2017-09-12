@@ -25,3 +25,5 @@ Should be the following files:
 Set the new remote URL:
 - `git remote set-url origin git@github.com:[your-user-name/new-project-name.git]`
 - git remote -v to confirm
+- git push origin master
+
