@@ -1,6 +1,7 @@
 <template>
   <div class="row">
     <div class="col-xs-12 col-sm-6">
+      <p>Main Server Status: {{mainServerStatus}}</p>
       <ul class="list-group">
         <li
         class="list-group-item"
@@ -13,4 +14,7 @@
 </template>
 
 <script>
+  export default {
+    props: ['mainServerStatus']
+  }
 </script>
