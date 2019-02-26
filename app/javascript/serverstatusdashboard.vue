@@ -1,28 +1,28 @@
 <template>
   <div class="container">
-    <header-component></header-component>
+    <serverstatusheader></serverstatusheader>
     <hr>
-    <body-component></body-component>
-    <details-component></details-component>
+    <serverstatusbody></serverstatusbody>
+    <serverstatusdetails></serverstatusdetails>
   <hr>
-  <footer-component></footer-component>
+  <serverstatusfooter></serverstatusfooter>
 </div>
 </template>
 
 <script>
   import Serverstatusheader from './serverstatusheader.vue'
-  import Serverstatusfooter from './serverstatusfooter.vue'
-  import Serverstatusdetails from './serverstatusdetails.vue'
   import Serverstatusbody from './serverstatusbody.vue'
+  import Serverstatusdetails from './serverstatusdetails.vue'
+  import Serverstatusfooter from './serverstatusfooter.vue'
 
   export default {
     components: {
-      'header-component': Serverstatusheader,
-      'footer-component': Serverstatusfooter,
-      'details-component': Serverstatusdetails,
-      'body-component': Serverstatusbody,
-    }
-  }
+     Serverstatusheader,
+     Serverstatusfooter,
+     Serverstatusdetails,
+     Serverstatusbody,
+   }
+ }
 </script>
 
 <style>
