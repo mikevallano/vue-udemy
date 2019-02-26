@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <p>Main Server Status: {{mainServerStatus}}</p>
+      <p :class="mainServerStatus == 'humming' ? 'text-success' : 'text-danger'">Main Server Status: {{mainServerStatus}}</p>
       <ul class="list-group">
         <li
         class="list-group-item"
@@ -15,6 +15,10 @@
 
 <script>
   export default {
-    props: ['mainServerStatus']
+    props: {
+      mainServerStatus: {
+        type: String,
+      }
+    }
   }
 </script>

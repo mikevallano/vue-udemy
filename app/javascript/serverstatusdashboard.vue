@@ -4,7 +4,7 @@
     <hr>
     <button class="btn btn-warning" @click="changeServerStatus">Change Server Status</button>
     <serverstatusbody :mainServerStatus="mainServerStatus"></serverstatusbody>
-    <serverstatusdetails></serverstatusdetails>
+    <serverstatusdetails testProp="testerinozingo"></serverstatusdetails>
   <hr>
   <serverstatusfooter></serverstatusfooter>
 </div>

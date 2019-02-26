@@ -30,7 +30,6 @@
 
 import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
-import Serverstatus from '../serverstatus.vue'
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     data: {
       message: "Can you say hello?"
     },
-    components: { App, Serverstatus }
+    components: { App }
   })
 })
 //
