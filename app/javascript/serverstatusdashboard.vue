@@ -3,8 +3,9 @@
     <serverstatusheader></serverstatusheader>
     <hr>
     <button class="btn btn-warning" @click="changeServerStatus">Change Server Status</button>
+    <p>{{passedProp}}</p>
     <serverstatusbody :mainServerStatus="mainServerStatus"></serverstatusbody>
-    <serverstatusdetails testProp="testerinozingo"></serverstatusdetails>
+    <serverstatusdetails testProp="testerinozingo" @propForPassingChange="updatePropFromChild"></serverstatusdetails>
   <hr>
   <serverstatusfooter></serverstatusfooter>
 </div>
@@ -19,7 +20,8 @@
   export default {
     data: function(){
       return {
-        mainServerStatus: 'humming'
+        mainServerStatus: 'humming',
+        passedProp: 'default val in data'
       }
     },
     components: {
@@ -31,6 +33,9 @@
    methods: {
     changeServerStatus() {
       this.mainServerStatus = "BORKED!"
+    },
+    updatePropFromChild(val){
+      this.passedProp = val
     },
    }
  }
