@@ -2,7 +2,7 @@
 <div class="col-xs-12 col-sm-6">
   <p>Server Details are currently not updated</p>
   <p>testProp: {{testProp}}</p>
-  <p>propForPassing: {{propForPassing}}</p>
+  <p :class="propForPassing == 'Default val in child' ? 'text-warning' : 'text-danger'">propForPassing: {{propForPassing}}</p>
   <button class="btn btn-success" @click="changePassProp">Change da prop</button>
 </div>
 </template>
@@ -11,7 +11,7 @@
   export default {
     data: function() {
       return {
-        propForPassing: 'initial val'
+        propForPassing: 'Default val in child'
       }
     },
     props: {
@@ -21,7 +21,7 @@
     },
     methods: {
       changePassProp() {
-        this.propForPassing = "changed in child"
+        this.propForPassing = "Prop changed from child!"
         this.$emit('propForPassingChange', this.propForPassing) // first arg is name of custom event that parent will listen for. second arg is the value passed
       }
     }

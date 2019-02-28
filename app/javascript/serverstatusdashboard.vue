@@ -3,11 +3,11 @@
     <serverstatusheader></serverstatusheader>
     <hr>
     <button class="btn btn-warning" @click="changeServerStatus">Change Server Status</button>
-    <p>{{passedProp}}</p>
+    <p :class="passedProp == 'Default val in parent' ? 'text-warning' : 'text-danger'">{{passedProp}}</p>
     <serverstatusbody :mainServerStatus="mainServerStatus"></serverstatusbody>
     <serverstatusdetails testProp="testerinozingo" @propForPassingChange="updatePropFromChild"></serverstatusdetails>
   <hr>
-  <serverstatusfooter></serverstatusfooter>
+  <serverstatusfooter :passedProp="passedProp"></serverstatusfooter>
 </div>
 </template>
 
@@ -21,7 +21,7 @@
     data: function(){
       return {
         mainServerStatus: 'humming',
-        passedProp: 'default val in data'
+        passedProp: 'Default val in parent'
       }
     },
     components: {
